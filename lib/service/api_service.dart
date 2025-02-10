@@ -4,7 +4,9 @@ import 'package:http/http.dart' as http;
 class ApiService {
   final http.Client client;
 
-  ApiService({required this.client});
+  ApiService({
+    required this.client,
+  });
 
   Future<String> fetchData() async {
     final response = await client.get(
